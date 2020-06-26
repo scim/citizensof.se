@@ -26,6 +26,10 @@ app {
     align-items: center;
 }
 
+svg {
+    width: 250px;
+}
+
 .main {
     flex: 1;
 }

@@ -1,0 +1,41 @@
+﻿@page "/swish"
+
+@using citizensof.se.Data
+@using Microsoft.AspNetCore.Http
+
+@inject SwishService SwishService
+@inject IHttpContextAccessor httpContextAccessor
+
+@inject Microsoft.AspNetCore.Identity.SignInManager<citizensof.se.Models.User> SignInManager
+
+<AuthorizeView>
+    <Authorized>
+        <h1>Weather forecast</h1>
+
+        <p>This component demonstrates fetching data from a service.</p>
+
+        @if (swishResult == null)
+        {
+            <p><em>Loading...</em></p>
+        }
+        else
+        {
+        @((MarkupString)$"{@swishResult.QrCode}")        
+        }
+    </Authorized>
+    <NotAuthorized>
+        <h1>Not authorized</h1>
+
+        <p>Du måste logga in för att se den här sidan.</p>
+    </NotAuthorized>
+</AuthorizeView>
+
+
+@code {
+    private SwishResult swishResult;
+
+    protected override async Task OnInitializedAsync()
+    {
+        swishResult = await SwishService.MakePaymentRequestAsync("Membership", httpContextAccessor.HttpContext.User.Identity.Name);
+    }
+}

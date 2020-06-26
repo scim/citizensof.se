@@ -41,6 +41,7 @@ namespace citizensof.se
             services.AddServerSideBlazor();
             services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<User>>();
             services.AddSingleton<WeatherForecastService>();
+            services.AddSingleton<SwishService>();
             services.AddAuthentication().AddFacebook(facebookOptions =>
             {
                 facebookOptions.AppId = Configuration["Authentication:Facebook:AppId"];
