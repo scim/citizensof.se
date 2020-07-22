@@ -1,0 +1,126 @@
+﻿@page "/register"
+
+    <BSContainer Class="content">
+        <BSRow>
+            <BSCol><h2>BLI MEDLEM</h2></BSCol>
+        </BSRow>
+        <BSRow>
+            <BSCol>
+                Vad roligt att du vill bli medlem i Sveriges härligaste ljusblå gememnskap! Börja med att fylla i nedanstående informaiton om dig själv och klicka på nästa för att 
+                skaffa dig ett medlemskap. Har du redan en användare och varit medlem tidigare, <a href="member">logga in </a>och skaffa medlemskap från din medlemsida.
+            </BSCol>
+        </BSRow>
+        <BSRow>
+            <BSCol>
+                &nbsp;
+            </BSCol>
+        </BSRow>
+        <BSRow>
+            <BSCol>
+                <form class="needs-validation">
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationTooltip01">Förnamn</label>
+                            <input type="text" class="form-control" id="validationTooltip01" required>
+                            <div class="valid-tooltip">
+                                OK!
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationTooltip02">Efternamn</label>
+                            <input type="text" class="form-control" id="validationTooltip02" required>
+                            <div class="valid-tooltip">
+                                OK!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationTooltip05">Postnummer</label>
+                            <input type="text" class="form-control" id="validationTooltip05" required>
+                            <div class="invalid-tooltip">
+                                Vänligen skriv in ditt postnummer.
+                            </div>
+                        </div>
+                        <div class="col-md-8 mb-3">
+                            <label for="validationTooltip03">Postort</label>
+                            <input type="text" class="form-control" id="validationTooltip03" required>
+                            <div class="invalid-tooltip">
+                                Vänligen fyll i din postort.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationTooltip05">Personnummer</label>
+                            <input type="text" class="form-control" id="validationTooltip05" placeholder="YYYY-MM-DD" required>
+                            <div class="invalid-tooltip">
+                                Vänligen skriv in ditt personnummer.
+                            </div>
+                        </div>
+                        <div class="col-md-5 mb-3">
+                            <label for="validationTooltip01">Mobiltelefon</label>
+                            <input type="text" class="form-control" id="validationTooltip011" required>
+                            <div class="valid-tooltip">
+                                OK!
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationTooltip04">Kön</label>
+                            <select class="custom-select" id="validationTooltip04" required>
+                                <option selected disabled value="">Välj...</option>
+                                <option>Man</option>
+                                <option>Kvinna</option>
+                            </select>
+                            <div class="invalid-tooltip">
+                                Vänligen välj ett kön.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">&nbsp;</div>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label for="validationTooltieep01">E-post</label>
+                            <input type="text" class="form-control" id="validationTooltip011" placeholder="Din e-post blir även din användare" required>
+                            <div class="valid-tooltip">
+                                OK!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">&nbsp;</div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationTooltip04">Typ av medlemskap</label>
+                            <select class="custom-select" id="validationTooltip04" required>
+                                <option selected disabled value="">Välj...</option>
+                                <option>Vuxen  (18->): 200kr</option>
+                                <option>Ungdom (->17): 100kr</option>
+                                <option>Familjemedlem: 100kr</option>
+                            </select>
+                            <div class="invalid-tooltip">
+                                Vänligen välj ett medlemskap.
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationTooltip02">Cityzensnummer</label>
+                            <input type="text" class="form-control" id="validationTooltip02" required>
+                            <div class="valid-tooltip">
+                                OK!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">&nbsp;</div>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-12">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1" required>
+                                <label class="custom-control-label" for="customSwitch1">Jag ger samtycke till supporterföreningen rörande mina data enligt deras <a href="#">GDPR-information</a>. </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">&nbsp;</div>
+                    <button class="btn btn-primary" type="submit" disabled>Gå vidare</button> Har du redan en användare? <a href="#">Logga in här</a>. <a href="register2"><BSButton ButtonType="ButtonType.Link" Color="Color.Light">Dev: Nästa steg</BSButton></a>
+</form>
+            </BSCol>
+        </BSRow>
+    </BSContainer>

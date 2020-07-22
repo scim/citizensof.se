@@ -1,5 +1,70 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+ <!-- WELCOME -->
+        <BSRow Class="welcome-container">
+            <BSCol>&nbsp;</BSCol>
+        </BSRow>
 
-Welcome to your new app.
+<!-- CONTENT -->
+<BSContainer Class="content">
+    <BSRow>
+        <BSCol XS="12" LG="6" XL="3">
+            <div class="service">
+                <div class="service-icon"><i class="fas fa-id-card"></i></div>
+                <h3>Medlemskap!</h3>
+                <p>Skaffa medlemskap i supporterföreningen för att komma in i världens bästa community!</p>
+                <a class="big-link-1" href="Register">Bli medlem</a>
+            </div>
+        </BSCol>
+        <BSCol XS="12" LG="6" XL="3">
+            <div class="service">
+                <div class="service-icon"><i class="fas fa-ticket-alt"></i></div>
+                <h3>Ansök om biljett!</h3>
+                <p>Som medlem kan du ansöka om biljett till alla Citys matcher. I alla turningingar! Hemma som borta!</p>
+                <a class="big-link-1" href="Tickets">Tillgängliga matcher</a>
+            </div>
+        </BSCol>
+        <BSCol XS="12" LG="6" XL="3">
+            <div class="service">
+                <div class="service-icon"><i class="fas fa-map-marked-alt"></i></div>
+                <h3>Samlas i Sverige!</h3>
+                <p>Givetvis har vi samligar i hela vårt avlånga land. Här hittar du vad som händer nära där du bor.</p>
+                <a class="big-link-1" href="Sweden">Kommande samlingar</a>
+            </div>
+        </BSCol>
+        <BSCol XS="12" LG="6" XL="3">
+            <div class="service">
+                <div class="service-icon"><i class="fab fa-facebook-square"></i></div>
+                <h3>Följ oss på Facebook!</h3>
+                <p>Här sprider vi information om vad som sker i föreningen samt diskuterar City varje dag!</p>
+                <a class="big-link-1" href="https://www.facebook.com/CitizensOfSweden" target="_blank">Besök vår sida</a>
+            </div>
+        </BSCol>
+    </BSRow>
+    <BSRow>
+        <BSCol MD="12" LG="6">
+            <div class="work">
+                <BSImage src="img/supporterresa.png" IsResponsive="true"></BSImage>
+                <h3>VÅRA SUPPORTERRESOR</h3>
+                <p>
+                    Flera gånger per säsong arrangerar vi gemensamma supporterresor där vi planerar för trevliga upptåg och upplever City tillsammans!
+                </p>
+                <div class="work-bottom">
+                    <a class="big-link-2" href="Counter"><i class="fas fa-info-circle"></i></a>
+                </div>
+            </div>
+        </BSCol>
+        <BSCol MD="12" LG="6">
+            <div class="work">
+                <BSImage src="img/manchester.png" IsResponsive="true"></BSImage>
+                <h3>MANCHESTERGUIDE!</h3>
+                <p>
+                    Läs på om fantastiksa Manchester och få tips på aktiviteter, matställen, pubar och andra saker du absolut inte ska missa på plats!
+                </p>
+                <div class="work-bottom">
+                    <a class="big-link-2" href="FetcData"><i class="fas fa-info-circle"></i></a>
+                </div>
+            </div>
+        </BSCol>
+    </BSRow>
+</BSContainer>

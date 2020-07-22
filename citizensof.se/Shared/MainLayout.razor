@@ -1,15 +1,49 @@
 ﻿@inherits LayoutComponentBase
+@inject IBootstrapCSS BootstrapCSS
 
-<div class="sidebar">
-    <NavMenu />
-</div>
+<BSContainer IsFluid="true" Class="main">
+    <BSRow Class="p-2 menu-row">
+        <BSCol XS="2" Class="menu-col-left"><BSButton Color="Color.Primary" @onclick="@(() => ModalMenu.Show())"><i class="fas fa-bars"></i></BSButton></BSCol>
+        <BSCol XS="8"><BSButton ButtonType="ButtonType.Link" Href="/" Color="Color.None"><BSImage IsResponsive="true" src="img/toplogo.png"></BSImage> Citizens of Sweden</BSButton></BSCol>
+        <BSCol XS="2" Class="menu-col-right"><BSButton Color="Color.Primary" ButtonType="ButtonType.Link" href="member"><i class="far fa-user"></i></BSButton></BSCol>
+    </BSRow>
 
-<div class="main">
-    <div class="top-row px-4 auth">
-        <LoginDisplay />
-    </div>
+    @Body
 
-    <div class="content px-4">
-        @Body
-    </div>
-</div>
+    <BSRow>
+        <BSCol Class="card-footer">Footer</BSCol>
+    </BSRow>
+</BSContainer>
+
+<BSModal @ref="ModalMenu" Class="ModalMenu">
+    <BSModalHeader OnClick="@(() => ModalMenu.Hide())">Meny</BSModalHeader>
+    <BSModalBody>
+        <NavMenu></NavMenu>
+    </BSModalBody>
+</BSModal>
+
+@code{
+    private bool isServerSide = false;
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            await BootstrapCSS.SetBootstrapCSS("4.3.1");
+        }
+        catch (Exception)
+        {
+            isServerSide = true;
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstrun)
+    {
+        if (isServerSide && firstrun)
+        {
+            await BootstrapCSS.SetBootstrapCSS("4.3.1");
+        }
+    }
+
+    BSModal ModalMenu { get; set; }
+}
+

@@ -16,6 +16,7 @@ using Microsoft.Extensions.Hosting;
 using citizensof.se.Areas.Identity;
 using citizensof.se.Data;
 using citizensof.se.Models;
+using BlazorStrap;
 
 namespace citizensof.se
 {
@@ -41,7 +42,6 @@ namespace citizensof.se
             services.AddServerSideBlazor();
             services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<User>>();
             services.AddSingleton<WeatherForecastService>();
-            services.AddSingleton<SwishService>();
             services.AddAuthentication().AddFacebook(facebookOptions =>
             {
                 facebookOptions.AppId = Configuration["Authentication:Facebook:AppId"];
@@ -54,6 +54,7 @@ namespace citizensof.se
                 options.ClientId = googleAuthNSection["ClientId"];
                 options.ClientSecret = googleAuthNSection["ClientSecret"];
             });
+            services.AddBootstrapCSS();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

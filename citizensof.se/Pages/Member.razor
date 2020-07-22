@@ -1,0 +1,158 @@
+﻿@page "/member"
+
+    <BSContainer Class="content">
+        <BSRow>
+            <BSCol><h2>FÖRNAMN EFTERNAMN</h2></BSCol>
+        </BSRow>
+        <BSRow>
+            <BSCol XS="12" MD="3"><BSImage IsResponsive="true" IsRounded="true" src="img/af.png"></BSImage></BSCol>
+            <BSCol XS="12" MD="9">
+                <BSRow>
+                    <BSCol XS="12" MD="3"><h6>E-post:</h6></BSCol>
+                    <BSCol XS="12" MD="9">andreas.fahlgren@gmail.com</BSCol>
+                </BSRow>
+                <BSRow>
+                    <BSCol XS="12" MD="3"><h6>Citynummer:</h6></BSCol>
+                    <BSCol XS="12" MD="9">1199227</BSCol>
+                </BSRow>
+                <BSRow>
+                    <BSCol XS="12" MD="3"><h6>Adress:</h6></BSCol>
+                    <BSCol XS="12" MD="9">Kornvägen 52<br />892 33 DOMSJÖ</BSCol>
+                </BSRow>
+                <BSRow>
+                    <BSCol XS="12" MD="3"><h6>Medlemskartan:</h6></BSCol>
+                    <BSCol XS="12" MD="9">Ja</BSCol>
+                </BSRow>
+                <BSRow>
+                    <BSCol XS="12" MD="3"><h6>CoS-poäng:</h6></BSCol>
+                    <BSCol XS="12" MD="9">3 100p</BSCol>
+                </BSRow>
+                <BSRow>
+                    <BSCol><BSButton ButtonType="ButtonType.Link" Href="Identity/Account/Manage" Class="big-link-1"><i class="far fa-edit"></i> Redigera</BSButton></BSCol>
+                </BSRow>
+            </BSCol>
+            <BSRow>
+                <BSCol>&nbsp;</BSCol>
+            </BSRow>
+        </BSRow>
+        <BSRow>
+            <BSCol>
+                <h5>Bevakningar</h5>
+                När du bevakar/följer något så får du ett mail till din med information när något sker med det du bevaker. Du kan bevaka mötesplatser, matcher, supporterresor samt forumtrådar. På detta sätt ser du till att inte missa någon viktig information! Nedan visas dina nuvarande bevakningar.<br /><br />
+                <BSTable IsStriped="true">
+                    <thead>
+                        <tr>
+                            <th scope="col">Bevakning</th>
+                            <th scope="col">Typ</th>
+                            <th scope="col">Aktiv till</th>
+                            <th scope="col">&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Umeå/Örnsköldsvik</th>
+                            <td>Mötesplats</td>
+                            <td>Tills vidare</td>
+                            <td><font color="#00285e"><i class="far fa-trash-alt fa-1x"></i></font></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Arsenal - City</th>
+                            <td>Match</td>
+                            <td>2020-09-14</td>
+                            <td><font color="#00285e"><i class="far fa-trash-alt fa-1x"></i></font></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tevez borde signas igen!</th>
+                            <td>Forumtråd</td>
+                            <td>2020-12-31</td>
+                            <td><font color="#00285e"><i class="far fa-trash-alt fa-1x"></i></font></td>
+                        </tr>
+                    </tbody>
+                </BSTable>
+            </BSCol>
+        </BSRow>
+        <BSRow>
+            <BSCol><BSButton ButtonType="ButtonType.Link" Href="#" Class="big-link-1"><i class="far fa-calendar-check"></i> Lägg till bevakning</BSButton></BSCol>
+        </BSRow>
+        <BSRow>
+            <BSCol>&nbsp;</BSCol>
+        </BSRow>
+        <BSRow>
+            <BSCol>
+                <h5>Kopplingar</h5>
+                Du kan kopppla andra medlemmar till din profil för att på så sätt på ett enkelt sätt kunna kontrollera deras medlemskap samt vid behov teckna eller förlänga medlemskapet åt dem. Ett enkelt sätt att säkerställa att hela familjen är medlem!<br /><br />
+                <BSTable IsStriped="true">
+                    <thead>
+                        <tr>
+                            <th scope="col">Namn</th>
+                            <th scope="col">Citynummer</th>
+                            <th scope="col">Staus</th>
+                            <th scope="col">&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Emil Fahlgren Vestin</th>
+                            <td>8264421</td>
+                            <td><font color="#00285e"><i class="fas fa-user-shield"></i></font> Medlem</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Axel Fahlgren Vestin</th>
+                            <td>8264415</td>
+                            <td><font color="#00285e"><i class="fas fa-user-shield"></i></font> Medlem</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Annica Kjellin</th>
+                            <td>8264194</td>
+                            <td><font color="#d4a11e"><i class="fas fa-user-times"></i></font> Ej medlem</td>
+                            <td><font color="#00285e"><i class="fas fa-user-shield"></i></font></td>
+                        </tr>
+                    </tbody>
+                </BSTable>
+            </BSCol>
+        </BSRow>
+        <BSRow>
+            <BSCol><BSButton ButtonType="ButtonType.Link" Href="#" Class="big-link-1"><i class="fas fa-user-plus"></i> Lägg till koppling</BSButton></BSCol>
+        </BSRow>
+        <BSRow>
+            <BSCol>&nbsp;</BSCol>
+        </BSRow>
+        <BSRow>
+            <BSCol>
+                <h5>Din aktivitet</h5>
+                I nedanstående tabell hittar du dina senaste aktiviteter! Du kan här också följa status på dina ansökningar samt korrigera dessa. För hela listan av dina aktiviteter <a href="#">klicka här</a>. <br /><br />
+                <BSTable IsStriped="true" IsHovarable="true" IsResponsive="true">
+                    <BSTableHead TableHeadType="TableHeadType.Light">
+                        <tr>
+                            <th scope="col">Datum</th>
+                            <th scope="col">Aktivitet</th>
+                            <th scope="col">Status</th>
+                            <th scope="col" width="10%">&nbsp;</th>
+                        </tr>
+                    </BSTableHead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">2020-08-13</th>
+                            <td>Biljett MCI-SWA</td>
+                            <td><font color="green"><i class="far fa-check-square"></i></font> Genomförd</td>
+                            <td><font color="#00285e"><i class="fas fa-info-circle fa-1x"></i></font></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2020-12-01</th>
+                            <td>Supporterpryl</td>
+                            <td><font color="green"><i class="fas fa-money-bill"></i></font> Betald</td>
+                            <td><font color="#00285e"><i class="fas fa-info-circle fa-1x"></i></font></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2020-12-05</th>
+                            <td>Biljett CHE-MCI</td>
+                            <td><font color="orange"><i class="far fa-question-circle"></i></font> Ansökt</td>
+                            <td><font color="#00285e"><i class="fas fa-info-circle fa-1x"></i></font>&nbsp;<font color="#00285e"><i class="fas fa-cog fa-1x"></i></font> </td>
+                        </tr>
+                    </tbody>
+                </BSTable>
+            </BSCol>
+        </BSRow>
+    </BSContainer>
